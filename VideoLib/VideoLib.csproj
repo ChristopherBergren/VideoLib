@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net10.0-windows10.0.17763.0</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -19,13 +19,70 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
     <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.21" />
     <PackageReference Include="Vlc.DotNet.Core" Version="3.1.0" />
     <PackageReference Include="Vlc.DotNet.Core.Interops" Version="3.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\Models\" />
+    <Reference Include="Syncfusion.Core.WinForms">
+      <HintPath>..\..\..\ProgramInstalls\SyncFusion\Windows\32.1.19\precompiledassemblies\net10.0\Syncfusion.Core.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.DataSource.WinForms">
+      <HintPath>..\..\..\ProgramInstalls\SyncFusion\Windows\32.1.19\precompiledassemblies\net10.0\Syncfusion.DataSource.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows">
+      <HintPath>..\..\..\ProgramInstalls\SyncFusion\Windows\32.1.19\precompiledassemblies\net10.0\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.WinForms">
+      <HintPath>..\..\..\ProgramInstalls\SyncFusion\Windows\32.1.19\precompiledassemblies\net10.0\Syncfusion.GridCommon.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing">
+      <HintPath>..\..\..\ProgramInstalls\SyncFusion\Windows\32.1.19\precompiledassemblies\net10.0\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfInput.WinForms">
+      <HintPath>..\..\..\ProgramInstalls\SyncFusion\Windows\32.1.19\precompiledassemblies\net10.0\Syncfusion.SfInput.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfListView.WinForms">
+      <HintPath>..\..\..\ProgramInstalls\SyncFusion\Windows\32.1.19\precompiledassemblies\net10.0\Syncfusion.SfListView.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base">
+      <HintPath>..\..\..\ProgramInstalls\SyncFusion\Windows\32.1.19\precompiledassemblies\net10.0\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows">
+      <HintPath>..\..\..\ProgramInstalls\SyncFusion\Windows\32.1.19\precompiledassemblies\net10.0\Syncfusion.Tools.Windows.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\data.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="Syncfusion.Grid.Windows">
+      <HintPath>..\..\..\ProgramInstalls\SyncFusion\Windows\32.1.19\precompiledassemblies\net10.0\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base">
+      <HintPath>..\..\..\ProgramInstalls\SyncFusion\Windows\32.1.19\precompiledassemblies\net10.0\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows">
+      <HintPath>..\..\..\ProgramInstalls\SyncFusion\Windows\32.1.19\precompiledassemblies\net10.0\Syncfusion.Tools.Windows.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

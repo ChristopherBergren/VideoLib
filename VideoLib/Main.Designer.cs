@@ -31,11 +31,12 @@
             components = new System.ComponentModel.Container();
             button1 = new Button();
             cuiControlBlur1 = new CuoreUI.Components.cuiControlBlur(components);
+            saveFileDialog1 = new SaveFileDialog();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(49, 26);
+            button1.Location = new Point(252, 257);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
@@ -63,5 +64,6 @@
 
         private Button button1;
         private CuoreUI.Components.cuiControlBlur cuiControlBlur1;
+        private SaveFileDialog saveFileDialog1;
     }
 }
